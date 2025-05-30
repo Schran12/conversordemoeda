@@ -26,20 +26,6 @@ Bem-vindo ao **Conversor de Moedas**, um projeto desenvolvido com **HTML**, **CS
 
 ---
 
-## 📂 Como usar localmente
-
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   ```
-2. Navegue até o diretório do projeto:
-   ```bash
-   cd nome-do-repositorio
-   ```
-3. Abra o arquivo `index.html` no navegador.
-
----
-
 ## 📌 Melhorias Futuras
 
 - Adicionar suporte a mais moedas
