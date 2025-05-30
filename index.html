@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Conversor de moeda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="background-container">
+    <img class="img-background" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
+  </div>
+  
+  <div class="wrapper">
+    <header>Conversor de Moedas</header>
+    <form id="currency-form" action="#">
+      <div class="amount">
+        <p>Valor</p>
+        <input type="text" id="amount" value="1" inputmode="numeric" pattern="[0-9]*" autocomplete="off" />
+      </div>
+      <div class="drop-list">
+        <div class="from">
+          <p>De</p>
+          <div class="select-box">
+            <img src="https://flagcdn.com/48x36/us.png" alt="flag" id="from-flag" />
+            <select id="from-currency">
+              <!-- Opções inseridas via JS -->
+            </select>
+          </div>
+        </div>
+        <div class="icon">
+          <i class="fas fa-exchange-alt"></i>
+        </div>
+        <div class="to">
+          <p>Para</p>
+          <div class="select-box">
+            <img src="https://flagcdn.com/48x36/in.png" alt="flag" id="to-flag" />
+            <select id="to-currency">
+              <!-- Opções inseridas via JS -->
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="buscando-cotacao">Buscando cotação...</div>
+      <button type="submit"><span>Converter</span></button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

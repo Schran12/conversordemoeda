@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+/* Corpo com flex para centralizar */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Seleção */
+::selection {
+  color: #000;
+  background: #fff;
+}
+
+/* Wrapper com fundo semi-transparente + blur */
+.wrapper {
+  width: 370px;
+  padding: 30px;
+  border-radius: 12px;
+  background: rgba(34, 34, 34, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  z-index: 10;
+  position: relative;
+}
+
+.wrapper header {
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.wrapper form {
+  margin: 40px 0 20px 0;
+}
+
+form :where(input, select, button) {
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: #444;
+  color: #fff;
+}
+
+form p {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+form input {
+  height: 50px;
+  font-size: 17px;
+  padding: 0 15px;
+  border: 1px solid #999;
+  background: #555;
+}
+
+
+form .drop-list {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drop-list .select-box {
+  display: flex;
+  width: 115px;
+  height: 45px;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+  border: 1px solid #999;
+  background: #fff;
+  color: #000;
+}
+
+.select-box img {
+  max-width: 21px;
+}
+
+.select-box select {
+  width: auto;
+  font-size: 16px;
+  background: none;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+.select-box select::-webkit-scrollbar {
+  width: 8px;
+}
+
+.select-box select::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.select-box select::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+  border-right: 2px solid #ffffff;
+}
+
+.drop-list .icon {
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 22px;
+  color: #fff;
+}
+
+form .buscando-cotacao {
+  font-size: 17px;
+  margin: 20px 0 30px;
+}
+
+form button {
+  position: relative;
+  overflow: hidden;
+  height: 52px;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  transition: color 0.35s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+form button span {
+  position: relative;
+  z-index: 2;
+}
+
+form button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #28a745; /* fundo verde */
+  transition: width 0.35s ease;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+form button:hover {
+  color: #fff;
+  transform: scale(0.95);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35); /* sombra mais forte no hover */
+  border: 1px solid #28a745;
+}
+
+form button:hover::after {
+  width: 100%;
+}
+
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to { 
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to { 
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-moz-keyframes move-background {    
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to { 
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+    @-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to { 
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+.background-container{
+  position: fixed;
+  top: 0;
+  left:0;
+  bottom: 0;
+  right: 0;
+}
+
+.stars {
+ background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+ position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+    z-index: 0;
+}
+
+.twinkling{
+  width:10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+  background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    
+    -moz-animation:move-background 70s linear infinite;
+  -ms-animation:move-background 70s linear infinite;
+  -o-animation:move-background 70s linear infinite;
+  -webkit-animation:move-background 70s linear infinite;
+  animation:move-background 70s linear infinite;
+  
+}
+
+.clouds{
+  width:10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+  background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+
+   -moz-animation:move-background 150s linear infinite;
+  -ms-animation:move-background 150s linear infinite;
+  -o-animation:move-background 150s linear infinite;
+  -webkit-animation:move-background 150s linear infinite;
+  animation:move-background 150s linear infinite;
+}
+.img-background{
+  height: 70vh;
+  width:70vh;
+  position: absolute;
+  z-index: 3;
+  right: 20px;
+}
